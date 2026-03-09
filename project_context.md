@@ -1,4 +1,4 @@
-# 📋 Project Context Documentation - Pizzeria System
+# 📋 Project Context Documentation - Restaurant System
 
 ## 📖 Index
 
