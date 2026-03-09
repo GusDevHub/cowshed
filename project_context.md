@@ -170,7 +170,7 @@ Roles:
 {
   id: string (UUID)
   name: string
-  price: number (int, cents)
+  price: number (int, pennies)
   description: string
   banner: string
   disabled: boolean
@@ -182,7 +182,7 @@ Roles:
 }
 ```
 
-Price is stored **in cents** to avoid floating-point problems.
+Price is stored **in pennies** to avoid floating-point problems.
 
 ---
 
@@ -498,7 +498,7 @@ Validation:
 
 ## 📝 Important Notes
 
-- Prices stored in cents
+- Prices stored in pennies
 - UUID v4 IDs
 - Automatic timestamps
 - Cascade delete rules
