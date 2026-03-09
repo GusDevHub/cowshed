@@ -17,7 +17,7 @@
 
 ## 🎯 Overview
 
-Backend management system for a pizzeria developed in Node.js with TypeScript, using Express as the web framework, Prisma ORM for communication with a PostgreSQL database, and Zod for data validation.
+Backend management system for a restaurant developed in Node.js with TypeScript, using Express as the web framework, Prisma ORM for communication with a PostgreSQL database, and Zod for data validation.
 
 ---
 
@@ -457,7 +457,7 @@ app.use((error: Error, _, res: Response) => {
 ### Environment Variables
 
 ```
-DATABASE_URL=postgresql://user:password@localhost:5432/pizzaria
+DATABASE_URL=postgresql://user:password@localhost:5432/restaurant
 JWT_SECRET=secret
 PORT=3333
 ```
