@@ -46,7 +46,7 @@ export function RegisterForm() {
               type="text"
               id="name"
               name="name"
-              placeholder="Insert your name"
+              placeholder="John Smith"
               required
               minLength={3}
               className="text-white bg-app-card border-app-border"
@@ -60,7 +60,7 @@ export function RegisterForm() {
               type="text"
               id="email"
               name="email"
-              placeholder="Insert your email address"
+              placeholder="john@smith.com"
               required
               className="text-white bg-app-card border-app-border"
             ></Input>
@@ -73,7 +73,7 @@ export function RegisterForm() {
               type="password"
               id="password"
               name="password"
-              placeholder="Insert your password"
+              placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"
               required
               className="text-white bg-app-card border-app-border"
             ></Input>
