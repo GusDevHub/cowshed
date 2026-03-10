@@ -5,12 +5,14 @@
 
 @theme {
   /* 🍽️ Custom Colours - Restaurant */
-  --color-brand-primary: oklch(0.62 0.25 12); /* #FF3F4B - Red colour */
-  --color-brand-primary-foreground: oklch(1 0 0); /* White text over brand */
-  --color-app-background: oklch(0.1804 0.03 268.34); /*  Main background */
-  --color-app-card: oklch(0.2204 0.0305 269.66); /* Card */
-  --color-app-border: oklch(0.3491 0.0199 269.56); /* Border */
-  --color-app-sidebar: oklch(0.16 0.03 270); /* Sidebar */
+  --color-brand-primary: oklch(0.72 0.12 85); /* #FF3F4B - Red colour */
+  --color-brand-primary-foreground: oklch(
+    0.98 0.01 95
+  ); /* White text over brand */
+  --color-app-background: oklch(0.23 0.03 150); /*  Main background */
+  --color-app-card: oklch(0.28 0.035 150); /* Card */
+  --color-app-border: oklch(0.38 0.03 150); /* Border */
+  --color-app-sidebar: oklch(0.2 0.035 155); /* Sidebar */
 }
 
 @theme inline {
