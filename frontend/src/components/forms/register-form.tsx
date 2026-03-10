@@ -26,7 +26,11 @@ export function RegisterForm() {
     <Card className="bg-app-card border-app-border w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="text-white text-center">
-          <img src="/logo.png" alt="Logo" className="rounded-md w-24 mx-auto" />
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="rounded-full w-24 mx-auto"
+          />
         </CardTitle>
         <CardDescription className="text-center text-xs">
           Create an account
