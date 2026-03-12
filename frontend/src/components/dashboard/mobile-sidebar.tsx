@@ -47,7 +47,7 @@ export function MobileSidebar() {
             </SheetTrigger>
             <SheetContent
               side="left"
-              className="w-72 p-0 bg-app-sidebar border-app-border"
+              className="w-72 p-0 bg-app-sidebar border-app-border text-white **:data-radix-sheet-close:text-white"
             >
               <SheetHeader className="border-b border-app-border p-6">
                 <SheetTitle className="text-xl text-white font-bold">
@@ -69,6 +69,9 @@ export function MobileSidebar() {
                           ? "bg-brand-primary text-white"
                           : "hover:bg-app-card",
                       )}
+                      onClick={() => {
+                        setOpen(false);
+                      }}
                     >
                       <Icon className="w-5 h-5" />
                       {menu.title}
