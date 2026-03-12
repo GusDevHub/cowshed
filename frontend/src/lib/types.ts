@@ -19,3 +19,19 @@ export interface Category {
   name: string;
   createdAt: string;
 }
+
+export interface Product {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+  banner: string;
+  disabled: string;
+  category_id: string;
+  createdAt: string;
+  updatedAt: string;
+  category?: {
+    id: string;
+    name: string;
+  };
+}

@@ -17,7 +17,9 @@ export default async function Categories() {
           <h1 className="text-2xl sm:text-3xl font-bold text-white">
             Categories
           </h1>
-          <p className="text-sm sm:text-base mt-1">Organize categories</p>
+          <p className="text-sm sm:text-base mt-1">
+            Create and manage categories
+          </p>
         </div>
         <CategoryForm />
       </div>

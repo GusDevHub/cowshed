@@ -44,7 +44,7 @@ export function CategoryForm() {
       </DialogTrigger>
       <DialogContent className="p-6 bg-app-card text-white">
         <DialogHeader>
-          <DialogTitle>New category</DialogTitle>
+          <DialogTitle className="font-semibold">New category</DialogTitle>
           <DialogDescription className="text-xs">
             Create a new category
           </DialogDescription>
@@ -59,7 +59,7 @@ export function CategoryForm() {
               id="name"
               name="name"
               required
-              placeholder="Insert category's name"
+              placeholder="Dessert"
               className="border-app-border bg-app-background text-white"
             />
           </div>
