@@ -142,7 +142,7 @@ export function ProductForm({ categories }: ProductFormProps) {
         render={
           <Button
             variant="ghost"
-            className="bg-brand-primary hover:bg-brand-primary font-semibold"
+            className="bg-brand-primary hover:bg-brand-primary font-semibold max-w-40"
           >
             New product
           </Button>
@@ -179,7 +179,7 @@ export function ProductForm({ categories }: ProductFormProps) {
               id="price"
               name="price"
               required
-              placeholder="Ex: 2,00"
+              placeholder="1.50"
               className="border-app-border bg-app-background text-white"
               value={priceValue}
               onChange={handlePriceChange}

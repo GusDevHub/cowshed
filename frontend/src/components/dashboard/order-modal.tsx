@@ -96,20 +96,20 @@ export function OrderModal({ onClose, orderId, token }: OrderModalProps) {
         ) : order ? (
           <div className="space-y-6">
             <div className="grid grid-cols-1 gap-4">
-              <div>
-                <p className="text-sm text-gray-400 mb-1">Table Number</p>
-                <p className="text-lg font-semibold">{order.table}</p>
+              <div className="flex items-center justify-items-start gap-2">
+                <p className="text-xs text-gray-400">Table Number:</p>
+                <p className="text-sm font-semibold">{order.table}</p>
               </div>
-              <div>
-                <p className="text-sm text-gray-400 mb-1">Client</p>
-                <p className="text-lg font-semibold">
+              <div className="flex items-center justify-items-start gap-2">
+                <p className="text-xs text-gray-400">Client:</p>
+                <p className="text-sm font-semibold">
                   {order.name || "Unknown"}
                 </p>
               </div>
-              <div>
-                <p className="text-sm text-gray-400 mb-1">Status</p>
+              <div className="flex items-center justify-items-start gap-2">
+                <p className="text-xs text-gray-400">Status:</p>
                 <span className="inline-block px-3 py-1 bg-white text-black rounded-full  font-medium text-xs">
-                  Cooking
+                  Preparing
                 </span>
               </div>
             </div>
@@ -127,10 +127,10 @@ export function OrderModal({ onClose, orderId, token }: OrderModalProps) {
                       >
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
-                            <h4 className="font-semibold text-base mb-1">
+                            <h4 className="font-semibold text-sm mb-1 truncate max-w-48 md:max-w-40">
                               {item.product.name}
                             </h4>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-xs text-gray-400">
                               {item.product.description}
                             </p>
                             <p className="text-sm text-gray-400 mt-2">
@@ -141,7 +141,7 @@ export function OrderModal({ onClose, orderId, token }: OrderModalProps) {
                             <p className="text-sm text-gray-400 mb-1">
                               Quantity: {item.amount}
                             </p>
-                            <p className="font-semibold text-base">
+                            <p className="font-semibold text-sm">
                               Subtotal: {formatPrice(subtotal)}
                             </p>
                           </div>

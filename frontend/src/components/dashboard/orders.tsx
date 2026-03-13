@@ -60,7 +60,7 @@ export function Orders({ token }: OrdersProps) {
           className="bg-brand-primary text-white hover:bg-brand-primary"
           onClick={fetchOrders}
         >
-          <RefreshCcw className="w-5 h-5" />
+          <RefreshCcw className="w-5 h-5" /> Refresh
         </Button>
       </div>
 
@@ -85,7 +85,7 @@ export function Orders({ token }: OrdersProps) {
                     Table #{order.table}
                   </CardTitle>
                   <Badge variant="secondary" className="text-xs select-none">
-                    Cooking
+                    Preparing
                   </Badge>
                 </div>
               </CardHeader>

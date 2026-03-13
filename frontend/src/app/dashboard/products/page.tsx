@@ -27,7 +27,7 @@ export default async function Products() {
 
   return (
     <div className="space-y-4 sm:space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-row items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-white">
             Products
@@ -45,7 +45,7 @@ export default async function Products() {
               key={product.id}
               className="bg-app-card border-app-border transition-shadow hover:shadow-md text-white overflow-hidden"
             >
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-48 -mt-4">
                 <Image
                   src={product.banner}
                   alt={product.name}
@@ -57,8 +57,9 @@ export default async function Products() {
               <CardHeader>
                 <CardTitle className="gap-2 flex items-center justify-between text-base md:text-lg">
                   <div className="flex flex-row gap-2 items-center">
-                    <Package className="w-5 h-5" />
-                    <span>{product.name}</span>
+                    <span className="truncate max-w-48 md:max-w-40">
+                      {product.name}
+                    </span>
                   </div>
                   <DeleteButtonProduct productId={product.id} />
                 </CardTitle>
