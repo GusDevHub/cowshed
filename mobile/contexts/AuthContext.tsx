@@ -1,7 +1,13 @@
 import api from "@/services/api";
 import { LoginResponse, User } from "@/types";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  use,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 interface AuthProviderProps {
   children: React.ReactNode;
@@ -12,14 +18,37 @@ interface AuthContextData {
   signed: boolean;
   loading: boolean;
   signIn: (email: string, password: string) => Promise<void>;
+  signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextData | undefined>(undefined);
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [signed, setSigned] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    async function loadData() {
+      await loadStorageData();
+    }
+    loadData();
+  }, []);
+
+  async function loadStorageData() {
+    try {
+      setLoading(true);
+      const storedToken = await AsyncStorage.getItem("@restaurant-token");
+      const storedUser = await AsyncStorage.getItem("@restaurant-user");
+      if (storedToken && storedUser) {
+        setUser(JSON.parse(storedUser));
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   async function signIn(email: string, password: string) {
     try {
@@ -49,13 +78,19 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }
 
+  async function signOut() {
+    await AsyncStorage.multiRemove(["@restaurant-token", "@restaurant-user"]);
+    setUser(null);
+  }
+
   return (
     <AuthContext.Provider
       value={{
-        signed,
+        signed: !!user,
         loading,
         signIn,
         user,
+        signOut,
       }}
     >
       {children}
