@@ -1,17 +1,17 @@
 import { Button } from "@/components/Button";
 import Input from "@/components/Input";
-import { colors, fontSize, spacing } from "@/constants/theme";
+import { borderRadius, colors, fontSize, spacing } from "@/constants/theme";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
   Alert,
   KeyboardAvoidingView,
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
   View,
+  Image,
 } from "react-native";
 
 export default function Login() {
@@ -45,7 +45,11 @@ export default function Login() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.logoContainer}>
-          <Text style={styles.logoText}>Cowshed</Text>
+          <Image
+            source={require("@/assets/images/logo.png")}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
           <Text style={styles.logoSubtitle}>Waiter App</Text>
         </View>
 
@@ -87,14 +91,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: spacing.xl,
   },
-  logoText: {
-    fontSize: 50,
-    fontWeight: "bold",
-    color: colors.brand,
+  logoImage: {
+    width: 180,
+    height: 100,
   },
   logoSubtitle: {
-    fontSize: fontSize.lg,
-    color: colors.primary,
+    fontSize: fontSize.sm,
+    color: colors.gray,
   },
   formContainer: {
     gap: spacing.lg,
